@@ -5,7 +5,7 @@ namespace NumberProblems\Test;
 use NumberProblems\NumberUtils\PrimeNumbers;
 use PHPUnit\Framework\TestCase;
 
-class isPrimeTest extends TestCase
+class PrimeNumbersTest extends TestCase
 {
     public function testIsPrime() {
         $this->assertEquals(false, PrimeNumbers::isPrime(1));
