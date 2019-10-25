@@ -1,13 +1,15 @@
 <?php
 
-require(dirname(__DIR__) . '/functions/isPrime.php');
+namespace NumberProblems;
+
+use NumberProblems\PrimeNumbers;
 
 $maxInteger = $argv[1];
 
 $rollingTotal = 0;
 
 for ($i = 2; $i < $maxInteger; $i++) {
-    if (isPrime($i)) {
+    if (PrimeNumbers::isPrime($i)) {
         $rollingTotal += $i;
     }
 }
