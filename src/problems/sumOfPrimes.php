@@ -1,8 +1,8 @@
 <?php
 
-namespace NumberProblems;
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
-use NumberProblems\PrimeNumbers;
+use NumberProblems\NumberUtils\PrimeNumbers;
 
 $maxInteger = $argv[1];
 

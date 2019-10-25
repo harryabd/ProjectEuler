@@ -1,7 +1,8 @@
 <?php
 
-namespace NumberProblems;
+namespace NumberProblems\Test;
 
+use NumberProblems\NumberUtils\PrimeNumbers;
 use PHPUnit\Framework\TestCase;
 
 class isPrimeTest extends TestCase

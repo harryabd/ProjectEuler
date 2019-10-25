@@ -1,6 +1,6 @@
 <?php
 
-namespace NumberProblems;
+namespace NumberProblems\NumberUtils;
 
 /**
  * PrimeNumbers
@@ -10,7 +10,9 @@ namespace NumberProblems;
 class PrimeNumbers
 {
     public static function isPrime(int $number) : bool {
-        if ($number === 2 || $number === 3) {
+        if ($number === 1) {
+            return false;
+        } elseif ($number === 2 || $number === 3) {
             return true;
         }
         for ($i = 2; $i < sqrt($number) + 1; $i++) {
