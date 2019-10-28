@@ -12,7 +12,7 @@ class Divisors
     public static function getDivisors($number) {
         $divisors = [];
         for ($i = 1; $i <= $number; $i++) {
-            if (is_integer($number / $i)) {
+            if ($number % $i == 0) {
                 $divisors[] = $i;
             }
         }
@@ -20,6 +20,15 @@ class Divisors
     }
 
     public static function getNumberOfDivisors($number) {
-        return count(self::getDivisors($number));
+        $count = 0;
+        for ($i = 1; $i <= sqrt($number); $i++) {
+            if ($number % $i == 0) {
+                $count += 2;
+            }
+            if ($i * $i == $number) {
+                $count--;
+            }
+        }
+        return $count;
     }
 }
